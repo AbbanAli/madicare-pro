@@ -14,12 +14,10 @@
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #f8fafc; }
         .font-serif { font-family: 'Playfair Display', serif; }
         
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: #0ea5e9; border-radius: 4px; }
         
-        /* Glass Morphism */
         .glass {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -34,7 +32,6 @@
             background-clip: text;
         }
         
-        /* Animated Background Blobs */
         .blob {
             position: absolute;
             border-radius: 50%;
@@ -49,7 +46,6 @@
             66% { transform: translate(-20px, 20px) scale(0.9); }
         }
         
-        /* Card Hover Effects */
         .hover-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -58,7 +54,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         }
         
-        /* Pulse Animation */
         .pulse-dot {
             animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
         }
@@ -68,7 +63,6 @@
             100% { transform: scale(2.5); opacity: 0; }
         }
         
-        /* Navigation */
         .nav-item {
             position: relative;
             cursor: pointer;
@@ -87,7 +81,6 @@
             width: 100%;
         }
         
-        /* Buttons */
         .btn-primary {
             background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
             transition: all 0.3s ease;
@@ -108,7 +101,6 @@
             transform: translateY(-2px);
         }
         
-        /* Timeline */
         .timeline-item {
             position: relative;
             padding-left: 30px;
@@ -125,7 +117,6 @@
             background: #0ea5e9;
         }
         
-        /* Service Accordion */
         .service-content {
             max-height: 0;
             overflow: hidden;
@@ -135,7 +126,6 @@
             max-height: 500px;
         }
         
-        /* Chat Widget */
         .chat-widget {
             position: fixed;
             bottom: 30px;
@@ -143,7 +133,6 @@
             z-index: 1000;
         }
         
-        /* Loader */
         #loader {
             position: fixed;
             inset: 0;
@@ -167,7 +156,6 @@
             50% { transform: scale(1.1); }
         }
         
-        /* Marquee Animation */
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -176,13 +164,11 @@
             animation: marquee 30s linear infinite;
         }
         
-        /* Grid Pattern */
         .grid-pattern {
             background-image: radial-gradient(circle at 1px 1px, #cbd5e1 1px, transparent 0);
             background-size: 40px 40px;
         }
         
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -198,7 +184,6 @@
             padding: 1rem;
         }
         
-        /* Toast */
         #toast {
             position: fixed;
             top: 100px;
@@ -218,10 +203,10 @@
         }
     </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body class="text-slate-800">
 
-    <!-- Loader -->
     <div id="loader">
         <div class="flex flex-col items-center gap-4">
             <div class="loader-heart"></div>
@@ -229,8 +214,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-        <!-- Disclaimer Modal -->
     <div id="disclaimerModal" class="fixed inset-0 z-[10000] flex items-center justify-center bg-slate-900/95 backdrop-blur-sm p-4">
         <div class="bg-white rounded-3xl p-8 max-w-lg w-full shadow-2xl transform scale-100 transition-all duration-500" id="disclaimerContent">
             <div class="text-center mb-6">
@@ -277,7 +260,7 @@
         </div>
     </div>
 
-<nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50 transition-transform duration-300" id="navbar">
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50 transition-transform duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3 cursor-pointer" onclick="scrollToSection('home')">
@@ -307,7 +290,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden glass border-t border-slate-200">
             <div class="px-4 py-4 space-y-3">
                 <button onclick="scrollToSection('home')" class="block w-full text-left py-2 text-slate-700 font-medium">Home</button>
@@ -319,7 +301,6 @@
         </div>
     </nav>
 
-    <!-- HOME SECTION -->
     <section id="home" class="min-h-screen pt-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-sky-50 to-emerald-50">
         <!-- Animated Blobs -->
         <div class="blob w-96 h-96 bg-sky-300 top-20 -left-20" style="animation-delay: 0s;"></div>
@@ -328,7 +309,6 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-                <!-- Left Content -->
                 <div class="space-y-8">
                     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur rounded-full border border-sky-200 shadow-sm">
                         <span class="relative flex h-3 w-3">
@@ -358,7 +338,6 @@
                         </button>
                     </div>
 
-                    <!-- Live Stats -->
                     <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200">
                         <div>
                             <p class="text-3xl font-bold text-sky-600 counter" data-target="15000">0</p>
@@ -375,14 +354,12 @@
                     </div>
                 </div>
 
-                <!-- Right Image -->
                 <div class="relative">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop" alt="Medical Team" class="w-full h-auto object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                     </div>
 
-                    <!-- Floating Cards -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl">
                         <div class="flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Doctor">
@@ -410,17 +387,14 @@
                 </div>
             </div>
 
-            <!-- Recent Patients Marquee -->
             <div class="mt-20 overflow-hidden bg-white/50 backdrop-blur rounded-2xl p-6 border border-slate-200">
                 <p class="text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wider">Recent Patient Activity</p>
                 <div class="flex gap-6 animate-marquee whitespace-nowrap" id="patientMarquee">
-                    <!-- Populated by JS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -444,7 +418,7 @@
                         <p class="text-slate-600">Pioneered virtual consultations, serving over 5,000 patients remotely during challenging times.</p>
                     </div>
                     <div class="timeline-item">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">2024 - Today</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">2026 - Today</h3>
                         <p class="text-slate-600">Recognized as the #1 Healthcare Provider in the region with 50+ doctors and 15,000+ patients.</p>
                     </div>
                 </div>
@@ -473,7 +447,6 @@
                 </div>
             </div>
 
-            <!-- Mission Cards -->
             <div class="grid md:grid-cols-3 gap-8 mt-20">
                 <div class="bg-gradient-to-br from-sky-50 to-white p-8 rounded-3xl border border-sky-100 hover-card">
                     <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 mb-6">
@@ -500,7 +473,6 @@
         </div>
     </section>
 
-    <!-- DOCTORS SECTION -->
     <section id="doctors" class="py-24 bg-slate-50 relative grid-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -509,7 +481,6 @@
                 <p class="text-xl text-slate-600 max-w-2xl mx-auto">Board-certified physicians dedicated to your wellbeing.</p>
             </div>
 
-            <!-- Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <button onclick="filterDoctors('all')" class="filter-btn px-6 py-2 rounded-full bg-sky-500 text-white font-medium transition hover:shadow-lg" data-filter="all">All</button>
                 <button onclick="filterDoctors('cardiology')" class="filter-btn px-6 py-2 rounded-full bg-white text-slate-600 font-medium transition hover:shadow-lg border border-slate-200" data-filter="cardiology">Cardiology</button>
@@ -518,12 +489,9 @@
                 <button onclick="filterDoctors('orthopedics')" class="filter-btn px-6 py-2 rounded-full bg-white text-slate-600 font-medium transition hover:shadow-lg border border-slate-200" data-filter="orthopedics">Orthopedics</button>
             </div>
 
-            <!-- Doctors Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="doctorsGrid">
-                <!-- Doctor cards populated by JS -->
             </div>
 
-            <!-- Live Stats -->
             <div class="mt-20 bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
                 <div class="grid md:grid-cols-4 gap-8 text-center">
                     <div>
@@ -547,7 +515,6 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
     <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -557,12 +524,9 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8">
-                <!-- Service List -->
                 <div class="space-y-4" id="servicesList">
-                    <!-- Services populated by JS -->
                 </div>
 
-                <!-- Service Preview -->
                 <div class="relative lg:sticky lg:top-24 h-fit">
                     <div class="rounded-3xl overflow-hidden shadow-2xl" id="servicePreview">
                         <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop" alt="Service Preview" class="w-full h-[500px] object-cover transition-all duration-500" id="previewImage">
@@ -576,7 +540,6 @@
                 </div>
             </div>
 
-            <!-- Pricing Cards -->
             <div class="mt-20 grid md:grid-cols-3 gap-8">
                 <div class="bg-white border-2 border-slate-100 rounded-3xl p-8 hover-card relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-slate-100 text-slate-600 px-4 py-1 rounded-bl-2xl text-sm font-medium">Basic</div>
@@ -622,7 +585,6 @@
         </div>
     </section>
 
-    <!-- HELP SECTION -->
     <section id="help" class="py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
@@ -635,9 +597,7 @@
                     <h2 class="text-4xl md:text-5xl font-serif font-bold">How Can We<br>Help You?</h2>
                     <p class="text-xl text-slate-300">Find answers to common questions or reach out to our support team.</p>
 
-                    <!-- FAQ Accordion -->
                     <div class="space-y-4" id="faqContainer">
-                        <!-- FAQs populated by JS -->
                     </div>
 
                     <div class="pt-8 border-t border-white/10">
@@ -695,7 +655,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -735,12 +694,11 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-slate-900 text-center text-sm">
-                <p>&copy; 2024 MediCare Pro. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2026 MediCare Pro. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
-    <!-- Booking Modal -->
     <div id="bookingModal" class="modal">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="bookingContent">
             <div class="flex justify-between items-center mb-6">
@@ -767,7 +725,6 @@
         </div>
     </div>
 
-    <!-- Chat Widget -->
     <div class="chat-widget">
         <button onclick="toggleChat()" class="w-14 h-14 bg-gradient-to-r from-sky-500 to-emerald-500 rounded-full shadow-lg flex items-center justify-center text-white text-2xl hover:scale-110 transition transform">
             <i class="fas fa-comment-medical"></i>
@@ -801,7 +758,6 @@
         </div>
     </div>
 
-    <!-- Toast Notification -->
     <div id="toast">
         <div class="flex items-start gap-3">
             <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 flex-shrink-0">
@@ -823,7 +779,7 @@
             { id: 5, name: "Dr. Lisa Park", specialty: "cardiology", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop", experience: "10 years", rating: 4.7, patients: 1100 },
             { id: 6, name: "Dr. Robert Kim", specialty: "neurology", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop", experience: "18 years", rating: 4.9, patients: 900 },
             { id: 7, name: "Dr. Amanda Foster", specialty: "pediatrics", image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=400&fit=crop", experience: "6 years", rating: 4.8, patients: 1300 },
-            { id: 8, name: "Dr. David Lee", specialty: "orthopedics", image: "https://images.unsplash.com/photo-1612531386530-97286d74c2ea?w=400&h=400&fit=crop", experience: "14 years", rating: 4.8, patients: 750 }
+            { id: 8, name: "Dr. David Lee", specialty: "orthopedics", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop", experience: "14 years", rating: 4.8, patients: 750 }
         ];
 
         const services = [
